@@ -13,7 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(collation = "patient")
+@Document(collection = "patient")
 public class Patient implements Serializable {
     @Id
     private String id;
