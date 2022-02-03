@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  patient-server:
+    container_name: "patient-server"
+    build:
+      context: "patient-service"
+    resttart: always
+    ports:
+      - "8080:8080"
+    environment:
+      MONGO_HOST: ${MONGO_HOST}
+      MONGO_USERNAME: ${MONGO_USERNAME}
+      MONGO_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_DATABASE: ${MONGO_DATABASE}
+    env_file:
+      - .env
+    healthcheck:
+      test: exit 0
+    hostname: patient-server
