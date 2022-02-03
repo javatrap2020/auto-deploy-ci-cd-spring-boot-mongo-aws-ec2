@@ -2,9 +2,9 @@ version: '3.7'
 
 services:
   patient-server:
-    container_name: "patient-server"
+    container_name: "spring-boot-docker"
     build:
-      context: "patient-service"
+      context: "spring-boot-docker"
     resttart: always
     ports:
       - "8080:8080"
