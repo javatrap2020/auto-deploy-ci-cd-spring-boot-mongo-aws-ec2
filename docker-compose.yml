@@ -4,8 +4,8 @@ services:
   patient-server:
     container_name: "spring-boot-docker"
     build:
-      context: "spring-boot-docker"
-    resttart: always
+      context: .
+    restart: always
     ports:
       - "8080:8080"
     environment:
