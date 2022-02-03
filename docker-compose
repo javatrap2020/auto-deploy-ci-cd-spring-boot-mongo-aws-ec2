@@ -9,10 +9,10 @@ services:
     ports:
       - "8080:8080"
     environment:
-      MONGO_HOST: ${MONGO_HOST}
-      MONGO_USERNAME: ${MONGO_USERNAME}
-      MONGO_PASSWORD: ${MONGO_PASSWORD}
-      MONGO_DATABASE: ${MONGO_DATABASE}
+      MONGO_HOST: ${MONGO_HOST_2}
+      MONGO_USERNAME: ${MONGO_USERNAME_2}
+      MONGO_PASSWORD: ${MONGO_PASSWORD_2}
+      MONGO_DATABASE: ${MONGO_DATABASE_2}
     env_file:
       - .env
     healthcheck:

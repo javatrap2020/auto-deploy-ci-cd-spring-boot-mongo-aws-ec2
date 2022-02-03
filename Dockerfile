@@ -1,4 +1,4 @@
 FROM openjdk:11
-ADD target/spring-boot-docker.jar spring-boot-docker.jar
+COPY target/*.jar spring-boot-docker.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/spring-boot-docker.jar"]
