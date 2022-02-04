@@ -15,9 +15,9 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      # Step 3
-      - name: Build Application and Run unit Test
-        run: mvn -B test --file auto-deploy-ci-cd-spring-boot-mongo-aws-ec2/pom.xml
+#      # Step 3
+#      - name: Build Application and Run unit Test
+#        run: mvn -B test --file auto-deploy-ci-cd-spring-boot-mongo-aws-ec2/pom.xml
         
   continuous-deployment:
     runs-on: ubuntu-latest
