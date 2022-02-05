@@ -38,7 +38,7 @@ jobs:
         id: deploy
         run: |
           aws deploy create-deployment \
-            --application-name Git-Aplication-2 \
-            --deployment-group-name development-group-002 \
+            --application-name Git-Application-User003 \
+            --deployment-group-name development_gropup-user3 \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
