@@ -7,5 +7,8 @@ sudo service docker start
 sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose
 sudo usermod -aG docker ec2-user
 sudo service docker start
+sudo su
+yum update -y
+aws s3 cp s3://deploy-git-bucket-user3/.env /home/ec2-user/server
 cd server/
 sudo docker-compose up
