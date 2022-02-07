@@ -5,7 +5,6 @@ files:
     destination: /home/ec2-user/server
 
 hooks:
-
   BeforeInstall:
     - location: scripts/start_docker.sh
       timeout: 300
