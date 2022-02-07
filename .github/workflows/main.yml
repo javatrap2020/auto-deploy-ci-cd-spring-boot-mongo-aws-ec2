@@ -27,7 +27,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v1
         with:
-         version: v0.7.0
          push: true
          tags: javatrap/spring-boot-docker:latest
 
