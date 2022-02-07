@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: .
-    destination: /home/es2-user/auto-deploy-ci-cd-spring-boot-mongo-aws-ec2/
+  - source: /spring-boot-docker.jar
+    destination: /tmp
 hooks:
   AfterInstall:
     - location: setup.sh
