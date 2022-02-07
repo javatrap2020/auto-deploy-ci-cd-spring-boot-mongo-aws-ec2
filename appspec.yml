@@ -11,6 +11,11 @@ permission:
     group: ec2-user
 
 hooks:
+  ApplicationStop:
+    - location: scripts/stop.sh
+      timeout: 20
+      runas: ec2-user
+
   BeforeInstall:
     - location: scripts/server_clear.sh
       timeout: 300
@@ -20,7 +25,7 @@ hooks:
     - location: scripts/setup.sh
       timeout: 300
       runas: ec2-user
-      
+
   ApplicationStart:
     - location: scripts/run.sh
       timeout: 300
