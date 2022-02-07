@@ -16,6 +16,7 @@ public class HelperUtil {
             Arrays.asList(
                     Patient.builder().name("Patient1").build(),
                     Patient.builder().name("Patient2").build(),
-                    Patient.builder().name("Patient3").build()
+                    Patient.builder().name("Patient3").build(),
+                    Patient.builder().name("Patient4").build()
             );
 }
