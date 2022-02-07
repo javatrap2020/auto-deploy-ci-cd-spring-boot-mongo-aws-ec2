@@ -3,30 +3,35 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/server
-
-permission:
-  - object: /
-    pattern: "**"
-    owner: ec2-user
-    group: ec2-user
+#
+#permission:
+#  - object: /
+#    pattern: "**"
+#    owner: ec2-user
+#    group: ec2-user
 
 hooks:
+
+  BeforeInstall:
+    - location: ./scripts/start_docker.sh
+      timeout: 300
+
   ApplicationStop:
-    - location: scripts/stop.sh
-      timeout: 20
-      runas: ec2-user
+    - location: scripts/kill_container.sh
+      timeout: 300
+      runas: root
 
 #  BeforeInstall:
 #    - location: scripts/server_clear.sh
 #      timeout: 300
 #      runas: ec2-user
 
-  AfterInstall:
-    - location: scripts/setup.sh
-      timeout: 300
-      runas: ec2-user
-
-#  ApplicationStart:
-#    - location: scripts/run.sh
+#  AfterInstall:
+#    - location: scripts/setup.sh
 #      timeout: 300
 #      runas: ec2-user
+
+  ApplicationStart:
+    - location: scripts/start_container.sh
+      timeout: 300
+      runas: root
