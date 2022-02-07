@@ -2,14 +2,27 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/app
+    destination: /home/ec2-user/server
+
+permission:
+  - object: /
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+
 hooks:
+  BeforeInstall:
+    - location: scripts/server_clear.sh
+      timeout: 300
+      runas: ec2-user
+
   AfterInstall:
+    - location: scripts/server_clear.sh
     - location: scripts/setup.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
 
   ApplicationStart:
     - location: scripts/run.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
