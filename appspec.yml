@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /spring-boot-docker.jar
-    destination: /tmp
+  - source: /
+    destination: /home/ubuntu/app
 hooks:
   AfterInstall:
     - location: setup.sh
