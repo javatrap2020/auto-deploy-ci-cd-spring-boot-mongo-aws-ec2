@@ -36,7 +36,7 @@ public class PatientServiceApplication {
                 logger.info("Inserting patient data to DB");
                 patientRepository.saveAll(HelperUtil.patientDataSupplier.get());
             } else {
-                logger.info("Patient data stored in total:: {} and Data :: {}",HelperUtil.patientDataSupplier.get(), patients.size(), patients);
+                logger.info("Patient data stored in total:: {} and Data :: {}", patients.size(), patients);
             }
         };
     }
