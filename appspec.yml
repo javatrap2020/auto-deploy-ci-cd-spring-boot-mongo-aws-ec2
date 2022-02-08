@@ -7,14 +7,14 @@ files:
 hooks:
   BeforeInstall:
     - location: scripts/start_docker.sh
-      timeout: 300
+      timeout: 150
 
   ApplicationStop:
     - location: scripts/kill_container.sh
-      timeout: 300
+      timeout: 15
       runas: root
 
   ApplicationStart:
     - location: scripts/start_container.sh
-      timeout: 300
+      timeout: 60
       runas: root
