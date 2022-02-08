@@ -13,8 +13,8 @@ hooks:
     - location: scripts/kill_container.sh
       timeout: 30
       runas: root
-#
-#  ApplicationStart:
-#    - location: scripts/start_container.sh
-#      timeout: 60
-#      runas: root
+
+  ApplicationStart:
+    - location: scripts/start_container.sh
+      timeout: 30
+      runas: root
