@@ -33,10 +33,10 @@ public class PatientServiceApplication {
         return args -> {
             List<Patient> patients = patientRepository.findAll();
             if (patients.size() == 0) {
-                logger.info("Inserting student data to DB");
+                logger.info("Inserting patient data to DB");
                 patientRepository.saveAll(HelperUtil.patientDataSupplier.get());
             } else {
-                logger.info("Patient data stored in total:: {} and Data :: {}", patients.size(), patients);
+                logger.info("Patient data stored in total:: {} and Data :: {}",HelperUtil.patientDataSupplier.get(), patients.size(), patients);
             }
         };
     }
