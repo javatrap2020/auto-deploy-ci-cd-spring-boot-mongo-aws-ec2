@@ -12,3 +12,5 @@ sudo su
 yum update -y
 aws s3 cp s3://deploy-git-bucket-user3/.env /home/ec2-user/server
 exit
+cd /home/ec2-user/server
+sudo docker-compose up
