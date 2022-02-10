@@ -7,3 +7,4 @@ sudo docker images
 sudo docker image rmi -f javatrap/spring-boot-docker
 cd /home/ec2-user/server
 sudo rm docker-compose.yml
+cd /home/ec2-user

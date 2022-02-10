@@ -10,6 +10,7 @@ sudo docker ps -a
 sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose
 cd /home/ec2-user/server
 sudo rm docker-compose.yml
+cd /home/ec2-user
 sudo su
 yum update -y
 aws s3 cp s3://deploy-git-bucket-user3/.env /home/ec2-user/server
